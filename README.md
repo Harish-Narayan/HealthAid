@@ -1,2 +1,3 @@
-# HELP-DESK
-Help Desk is a Hospital Management System where the patients can book an appointment with the doctors from the available doctors list. The doctors can treat the patients who have taken appointments while the doctor is also able the view the patient history. The admins have the access to add/remove/update the doctor's profile. 
+#HealthAid
+Health Aid is a hospital management system. Users can schedule appointments and view their history. They can also view their previous prescriptions.
+Doctors can view patient's medical history and prescribe medicines.
