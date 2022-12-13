@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSG HOSPITALS</title>
+    <style>
+        body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(https://image.freepik.com/free-photo/blur-hospital_1203-7972.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+        a:hover{
+            color: blue;
+        }
+        h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #ff0000;
+}
+        .btn-primary {
+      color: #ffffff;
+      background-color: #c9ada7ce;
+      border-color: #c9ada7ce;
+      border-radius: 4px;
+      
+      border-width: 2px;
+    }
+
+    .btn-primary:hover {
+      color: white;
+      background-color: #969090;
+      border-color: #969090;
+      box-shadow: 0 4px 16px 0 rgb(51, 49, 49);
+    }
+    .card {
+      box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      top: 100px;
+      color: white;
+      background-color: #cad0d36e;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    nav {
+    background-color: rgba(100, 41, 54, 0.719);
+    text-align: center;
+    overflow: hidden;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+.back{
+          position: absolute;
+          top:5%;
+            left:10%;
+          color: #ffffff;
+      background-color: #c9ada7ce;
+      border-color: #c9ada7ce;
+      border-radius: 4px;
+      border-width: 2px;
+      }
+      .back:hover{
+        color: rgb(121, 104, 104);
+      background-color: #b18a5f;
+      border-color: #a04f4f;
+      box-shadow: 0 4px 16px 0 rgba(136, 75, 75, 0.932);
+      }
+      .logout{
+        position: absolute;
+        right:10%;
+          top:5%;
+            
+      color: #ffffff;
+      background-color: #c9ada7ce;
+      border-color: #c9ada7ce;
+      border-radius: 4px;
+      border-width: 2px;
+
+      }
+      .logout:hover{
+        color: rgb(230, 198, 198);
+      background-color: #a52e2e;
+      border-color: #a32d2d;
+      box-shadow: 0 4px 16px 0 rgb(51, 49, 49);
+      }
+   
+    </style>
+</head>
+<body>
+    <div class="card">
+    <div>
+        <a href="/logout"><button class="logout">LOGOUT</button></a>
+    </div>
+    <br>
+    <div>
+        <a href="/doctor/{{doctor_id}}"><button class="back">BACK</button></a>
+    </div>
+    <br>
+    <div>
+        <header>
+            <h2>
+                PATIENTS LIST
+            </h2>
+        </header>
+    </div>
+    <br><hr><br>
+        {% for i in P %}
+         <div> 
+        <a href="/doctor/{{doctor_id}}/myPatients/{{i.patient_id}}"><button class="btn btn-primary">{{i.pat_part.patient_name}}</button></a>
+    </div>
+        <br><br>
+        {% endfor %}
+
+</div> 
+</body>
+</html>
